@@ -13,7 +13,7 @@ public:
 private:
     Stopwatch *stopwatch;
     Led *led;
-    int lastStateChange;
+    unsigned long lastStateChange;
     void flipLedState();
 };
 

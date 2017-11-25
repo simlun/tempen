@@ -7,8 +7,9 @@ Blinky::Blinky(Stopwatch *sw, Led *l) {
 }
 
 void Blinky::body() {
-    int now = stopwatch->getMillisecondsSinceStart();
-    if (now - lastStateChange >= 1000) {
+    unsigned long now = stopwatch->getMillisecondsSinceStart();
+    unsigned long diff = now - lastStateChange;
+    if (diff >= 1000) {
         flipLedState();
         lastStateChange = now;
     }
