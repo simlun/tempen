@@ -5,24 +5,35 @@
 
 class ArduinoStopwatch : public Stopwatch {
 public:
-    unsigned long getMillisecondsSinceStart() override {
-        return millis();
-    }
+  unsigned long getMillisecondsSinceStart() override {
+    return millis();
+  }
+};
+
+class ArduinoBuiltinLed : public Led {
+public:
+  ArduinoBuiltinLed() {
+    pinMode(LED_BUILTIN, OUTPUT);
+  }
+  
+  void enable() override {
+    Led::enable();
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
+
+  void disable() override {
+    Led::disable();
+    digitalWrite(LED_BUILTIN, LOW);
+  }
 };
 
 ArduinoStopwatch stopwatch;
-Led led;
+ArduinoBuiltinLed led;
 Blinky blinky(&stopwatch, &led);
-
 MicroController mc(&blinky);
 
-void setup() {
-  Serial.begin(115200);
-}
+void setup() {}
 
 void loop() {
   mc.tick();
-  Serial.print("LED status: ");
-  Serial.println(led.isGlowing());
-  delay(100);
 }
