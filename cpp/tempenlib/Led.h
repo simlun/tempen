@@ -11,7 +11,7 @@ public:
     void disable();
 
 private:
-    bool state;
+    bool state = false;
 };
 
 
