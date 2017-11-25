@@ -1,9 +1,6 @@
 add_library(Led Led.cpp)
 target_include_directories (Led PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
-add_library(Stopwatch Stopwatch.cpp)
-target_include_directories (Stopwatch PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-
 add_library(MicroController MicroController.cpp)
 target_include_directories (MicroController PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
