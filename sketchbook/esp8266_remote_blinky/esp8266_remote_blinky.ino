@@ -23,13 +23,13 @@ public:
 };
 
 
-class SerialReceiver : public Receiver {
+class Esp8266SerialReceiver : public Receiver {
 public:
   void setup() {
     Serial.begin(115200);
     while (!Serial) {}
   }
-  
+
   void receive() override {
     if (Serial.available() > 0) {
       char c = Serial.read();
@@ -40,7 +40,7 @@ public:
 
 
 Esp8266BuiltinLed led;
-SerialReceiver receiver;
+Esp8266SerialReceiver receiver;
 RemoteLedController controller(&receiver, &led);
 MicroController mc(&controller);
 
