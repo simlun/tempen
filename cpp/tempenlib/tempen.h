@@ -9,5 +9,6 @@
 #include <Receiver.h>
 #include <RemoteLedProtocol.h>
 #include <RemoteLed.h>
+#include <RemoteLedController.h>
 
 #endif //TEMPEN_TEMPEN_H

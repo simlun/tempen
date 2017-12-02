@@ -12,3 +12,6 @@ target_include_directories (Receiver PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_library(RemoteLed RemoteLed.cpp)
 target_include_directories (RemoteLed PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+add_library(RemoteLedController RemoteLedController.cpp)
+target_include_directories (RemoteLedController PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
