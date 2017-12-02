@@ -1,0 +1,9 @@
+#ifndef TEMPEN_REMOTELEDPROTOCOL_H
+#define TEMPEN_REMOTELEDPROTOCOL_H
+
+enum RemoteLedProtocol {
+    ENABLE = '1',
+    DISABLE = '0'
+};
+
+#endif //TEMPEN_REMOTELEDPROTOCOL_H
