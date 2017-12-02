@@ -1,10 +1,12 @@
 #include "Blinky.h"
 
+
 Blinky::Blinky(Stopwatch *sw, Led *l) {
     stopwatch = sw;
     led = l;
     lastStateChange = sw->getMillisecondsSinceStart();
 }
+
 
 void Blinky::body() {
     unsigned long now = stopwatch->getMillisecondsSinceStart();
@@ -14,6 +16,7 @@ void Blinky::body() {
         lastStateChange = now;
     }
 }
+
 
 void Blinky::flipLedState() {
     if (led->isGlowing())

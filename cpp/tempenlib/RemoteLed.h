@@ -4,6 +4,7 @@
 #include "Led.h"
 #include "Sender.h"
 
+
 class RemoteLed : public Led {
 public:
     explicit RemoteLed(Sender * sender) : sender(sender) {}

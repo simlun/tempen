@@ -5,9 +5,11 @@
 
 RemoteLedController::RemoteLedController(Receiver * receiver, Led * led) : receiver(receiver), led(led) {}
 
+
 void RemoteLedController::body() {
     receiver->receive();
 }
+
 
 void RemoteLedController::handle(char c) {
     if (c == RemoteLedProtocol::ENABLE)

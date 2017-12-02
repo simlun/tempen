@@ -5,11 +5,8 @@
 class Led {
 public:
     bool isGlowing();
-
     virtual void enable();
-
     virtual void disable();
-
 private:
     bool state = false;
 };
