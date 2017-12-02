@@ -6,3 +6,6 @@ target_include_directories (MicroController PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_library(Blinky Blinky.cpp)
 target_include_directories (Blinky PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+add_library(Receiver Receiver.cpp)
+target_include_directories (Receiver PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
