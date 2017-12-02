@@ -9,3 +9,6 @@ target_include_directories (Blinky PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_library(Receiver Receiver.cpp)
 target_include_directories (Receiver PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+add_library(RemoteLed RemoteLed.cpp)
+target_include_directories (RemoteLed PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
