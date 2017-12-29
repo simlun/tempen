@@ -11,3 +11,7 @@ void Clerk::work() {
 void Clerk::giveTask(Task *task) {
     currentTask = task;
 }
+
+void Clerk::body() {
+    work();
+}
